@@ -19,3 +19,23 @@ fashion_mnist = keras.datasets.fashion_mnist
 
 # Label0から9にクラス名を作成
 class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat' ,'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
+
+
+################
+###データの観察###
+################
+
+# 訓練用データセットには28×28ピクセルの画像が60,000枚含まれる
+print(train_images.shape) # (60000, 28, 28)
+
+# 訓練用データセットには60,000個のラベルが含まれる
+print(len(train_labels))
+
+# ラベルは0から9である
+print(train_labels)
+
+# 訓練用データセットには28×28ピクセルの画像が10,000枚含まれる
+print(test_images.shape)
+
+# テスト用データセットには10,000個のラベルが含まれる
+print(len(test_labels))
