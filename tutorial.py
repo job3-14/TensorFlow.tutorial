@@ -26,16 +26,16 @@ class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat' ,'Sandal', 
 ################
 
 # 訓練用データセットには28×28ピクセルの画像が60,000枚含まれる
-print(train_images.shape) # (60000, 28, 28)
+#print(train_images.shape) # (60000, 28, 28)
 
 # 訓練用データセットには60,000個のラベルが含まれる
-print(len(train_labels))
+#print(len(train_labels))
 
 # ラベルは0から9である
-print(train_labels)
+#print(train_labels)
 
 # 訓練用データセットには28×28ピクセルの画像が10,000枚含まれる
-print(test_images.shape)
+#print(test_images.shape)
 
 # テスト用データセットには10,000個のラベルが含まれる
-print(len(test_labels))
+#print(len(test_labels))
