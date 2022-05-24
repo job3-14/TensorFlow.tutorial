@@ -39,3 +39,35 @@ class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat' ,'Sandal', 
 
 # テスト用データセットには10,000個のラベルが含まれる
 #print(len(test_labels))
+
+
+##################
+###データの前処理###
+#################
+
+#train_images[0]をグラフ化
+'''
+plt.figure()
+plt.imshow(train_images[0])
+plt.colorbar()
+plt.grid(False)
+plt.show()
+'''
+
+# ニューラルネットワークにデータを投入する前に値を0から1に変換する
+# 画素である255で割る
+train_images = train_images / 255.0
+test_images = test_images / 255.0
+
+# 訓練用データセットの初めの25枚をグラフ表示する
+'''
+plt.figure(figsize=(10,10))
+for i in range(25):
+    plt.subplot(5,5,i+1)
+    plt.xticks([])
+    plt.yticks([])
+    plt.grid(False)
+    plt.imshow(train_images[i], cmap=plt.cm.binary)
+    plt.xlabel(class_names[train_labels[i]])
+plt.show()
+'''
