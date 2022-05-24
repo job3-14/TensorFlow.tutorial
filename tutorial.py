@@ -102,3 +102,9 @@ model.fit(train_images, train_labels, epochs=5)
 # テスト用データセットに対するモデルの性能を比較する
 test_loss, test_acc = model.evaluate(test_images,  test_labels, verbose=2)
 print('\nTest accuracy:', test_acc)
+
+###予測する###
+# モデルを使って画像の分類予測を行う
+predictions = model.predict(test_images)
+print("学習結果[予測]："+str(np.argmax(predictions[0]))) # predictions[0]最大値
+print("学習結果[正解]："+str(test_labels[0]))
