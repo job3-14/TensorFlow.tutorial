@@ -87,3 +87,9 @@ model = keras.Sequential([
 model.compile(optimizer='adam',  # オプティマイザ
               loss='sparse_categorical_crossentropy', # 損失関数
               metrics=['accuracy']) # メトリクス
+
+################
+###モデルの訓練###
+###############
+model.fit(train_images, train_labels, epochs=5)
+# モデルにtrain_images, train_labelsの配列を投入
