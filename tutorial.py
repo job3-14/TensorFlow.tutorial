@@ -93,3 +93,12 @@ model.compile(optimizer='adam',  # オプティマイザ
 ###############
 model.fit(train_images, train_labels, epochs=5)
 # モデルにtrain_images, train_labelsの配列を投入
+
+
+################
+###正解率の評価###
+################
+
+# テスト用データセットに対するモデルの性能を比較する
+test_loss, test_acc = model.evaluate(test_images,  test_labels, verbose=2)
+print('\nTest accuracy:', test_acc)
