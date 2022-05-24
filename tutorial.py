@@ -71,3 +71,19 @@ for i in range(25):
     plt.xlabel(class_names[train_labels[i]])
 plt.show()
 '''
+
+################
+###モデルの構築###
+###############
+
+###層の設定###
+model = keras.Sequential([
+    keras.layers.Flatten(input_shape=(28, 28)),
+    keras.layers.Dense(128, activation='relu'),
+    keras.layers.Dense(10, activation='softmax')
+])
+
+###モデルのコンパイル###
+model.compile(optimizer='adam',  # オプティマイザ
+              loss='sparse_categorical_crossentropy', # 損失関数
+              metrics=['accuracy']) # メトリクス
